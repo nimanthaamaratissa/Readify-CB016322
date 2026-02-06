@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readify - Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#667eea">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="images/logo.png" alt="logo" class="logo-img">
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span> 
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Book Explorer</a></li>
+                <li><a href="tracker.html">Reading Tracker</a></li>
+                <li><a href="recommender.html">Recommender</a></li>
+                <li><a href="flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Explore Readify</h1>
+        </div>
+        <div class="hero-content">
+            <div class="quote-section">
+                <p id="rotatingQuote" class="quote-text"></p>
+                <p id="quoteAuthor" class="quote-author"></p>
+            </div>
+            <div class="hero-image">
+                <div class="book-illustration">
+                    <img src="images/hero-img.png" alt="book-illustration" class="book-illustration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="author-section">
+        <h2 id="author-of-the-day">Author of the Day</h2>
+        <p id="aotd-text">Author of the Day highlights a writer whose work has inspired readers through powerful ideas, creativity, and meaningful stories. This section is dedicated to appreciating their contribution to literature and giving readers a chance to learn about the author's life, achievements, and most notable works.</p>
+        <img id="authorPhoto" src="images/author-photo.jpg" alt="Author" class="author-photo">
+        <h3 id="authorName" class="author-name"></h3>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="explorer.html">Explorer</a>
+                <a href="tracker.html">Tracker</a>
+                <a href="recommender.html">Recommender</a>
+                <a href="flow.html">Reading Flow</a>
+                <a href="feedback.html">Feedback</a>
+            </div>
+            <div class="newsletter">
+                <h2>Subscribe to Newsletter</h2>
+                <form id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="newsletterMessage"></p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Readify. All rights reserved.</p>
+    </footer>
+    
+
+    <script src="js/home.js"></script>
+</body>
+</html>

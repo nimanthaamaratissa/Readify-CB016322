@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readify - Book Explorer</title>
+    <link rel="stylesheet" href="css/explorer.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="images/logo.png" alt="logo" class="logo-img">
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Book Explorer</a></li>
+                <li><a href="tracker.html">Reading Tracker</a></li>
+                <li><a href="recommender.html">Recommender</a></li>
+                <li><a href="flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="explorer-main">
+        <h1>Book Explorer</h1>
+        
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search by title or author...">
+            <select id="genreFilter">
+                <option value="all">All Genres</option>
+                <option value="fiction">Fiction</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="mystery">Mystery</option>
+                <option value="romance">Romance</option>
+            </select>
+        </div>
+
+        <div class="books-grid" id="booksGrid"></div>
+    </main>
+
+    <!-- Modal -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalAuthor"></p>
+            <div id="modalSynopsis"></div>
+            <div id="modalSeries"></div>
+            <div id="modalRatings"></div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="explorer.html">Explorer</a>
+                <a href="tracker.html">Tracker</a>
+                <a href="recommender.html">Recommender</a>
+                <a href="flow.html">Reading Flow</a>
+                <a href="feedback.html">Feedback</a>
+            </div>
+            <div class="newsletter">
+                <h1>Subscribe to Newsletter</h1>
+                <form id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="newsletterMessage"></p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Readify. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/explorer.js"></script>
+</body>
+</html>

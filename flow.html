@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readify - Reading Flow</title>
+    <link rel="stylesheet" href="css/flow.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="images/logo.png" alt="logo" class="logo-img">
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Book Explorer</a></li>
+                <li><a href="tracker.html">Reading Tracker</a></li>
+                <li><a href="recommender.html">Recommender</a></li>
+                <li><a href="flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="flow-main">
+        <h1>Reading Flow</h1>
+        
+        <audio id="rainAudio" loop>
+            <source src="sounds/Rain-sound.mp3" type="audio/mpeg">
+        </audio>
+        
+        <div class="flow-container">
+            <div class="sound-section">
+                <h2>Cozy Reading Sounds</h2>
+                <p>Enhance your reading experience:</p>
+                
+                <div class="sound-control">
+                    <button id="rainSound" class="sound-btn">🌧️ Rain</button>
+                </div>
+            
+                <button id="stopAll" class="stop-btn">Stop Sound</button>
+            </div>
+
+            <div class="completed-section">
+                <h2>Track Completed Books</h2>
+                
+                <form id="completedForm" class="completed-form">
+                    <input type="text" id="completedTitle" placeholder="Book title" required>
+                    <input type="text" id="completedAuthor" placeholder="Author" required>
+                    <button type="submit">Mark as Completed</button>
+                </form>
+                
+                <div class="completed-list">
+                    <h3>Completed Books</h3>
+                    <div id="completedBooks"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="explorer.html">Explorer</a>
+                <a href="tracker.html">Tracker</a>
+                <a href="recommender.html">Recommender</a>
+                <a href="flow.html">Reading Flow</a>
+                <a href="feedback.html">Feedback</a>
+            </div>
+            <div class="newsletter">
+                <h3>Subscribe to Newsletter</h3>
+                <form id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="newsletterMessage"></p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Readify. All rights reserved.</p>
+    </footer>
+    
+    
+    <script src="js/flow.js"></script>
+</body>
+</html>
