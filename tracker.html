@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readify - Reading Tracker</title>
+    <link rel="stylesheet" href="css/tracker.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="images/logo.png" alt="logo" class="logo-img">
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Book Explorer</a></li>
+                <li><a href="tracker.html">Reading Tracker</a></li>
+                <li><a href="recommender.html">Recommender</a></li>
+                <li><a href="flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="tracker-main">
+        <h1>Reading Progress Tracker</h1>
+        
+        <div class="tracker-container">
+            <form id="trackerForm" class="tracker-form">
+                <div class="form-group">
+                    <label for="bookTitle">Book Title:</label>
+                    <input type="text" id="bookTitle" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="totalPages">Total Pages:</label>
+                    <input type="number" id="totalPages" min="1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pagesRead">Pages Read:</label>
+                    <input type="number" id="pagesRead" min="0" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="readingSpeed">Pages per Day:</label>
+                    <input type="number" id="readingSpeed" min="1" required>
+                </div>
+                
+                <button type="submit">Calculate Progress</button>
+            </form>
+            
+            <div id="results" class="results">
+                <h2>Your Progress</h2>
+                <div class="progress-stats">
+                    <div class="stat">
+                        <span class="stat-label">Completion:</span>
+                        <span id="percentComplete" class="stat-value">0%</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Pages Remaining:</span>
+                        <span id="pagesRemaining" class="stat-value">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Estimated Days to Finish:</span>
+                        <span id="daysToFinish" class="stat-value">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Estimated Finish Date:</span>
+                        <span id="finishDate" class="stat-value">-</span>
+                    </div>
+                </div>
+                
+                <div class="progress-bar-container">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+                
+                <button id="saveProgress" class="save-btn">Save Progress</button>
+                <p id="saveMessage" class="save-message"></p>
+            </div>
+            
+            <div class="saved-progress">
+                <h2>Saved Progress</h2>
+                <div id="savedList"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="explorer.html">Explorer</a>
+                <a href="tracker.html">Tracker</a>
+                <a href="recommender.html">Recommender</a>
+                <a href="flow.html">Reading Flow</a>
+                <a href="feedback.html">Feedback</a>
+            </div>
+            
+            <div class="newsletter">
+                <h3>Subscribe to Newsletter</h3>
+                <form id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="newsletterMessage"></p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Readify. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/tracker.js"></script>
+</body>
+</html>

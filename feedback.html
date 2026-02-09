@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readify - Feedback</title>
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="images/logo.png" alt="logo" class="logo-img">
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Book Explorer</a></li>
+                <li><a href="tracker.html">Reading Tracker</a></li>
+                <li><a href="recommender.html">Recommender</a></li>
+                <li><a href="flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="feedback-main">
+        <h1>Feedback & FAQ</h1>
+        
+        <div class="feedback-container">
+            <div class="form-section">
+                <h2>Send Us Your Feedback</h2>
+                <form id="feedbackForm" class="feedback-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required minlength="2">
+                        <span class="error" id="nameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                        <span class="error" id="emailError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" rows="6" required minlength="10"></textarea>
+                        <span class="error" id="messageError"></span>
+                    </div>
+                    
+                    <button type="submit">Submit Feedback</button>
+                </form>
+                
+                <div id="confirmationMessage" class="confirmation"></div>
+            </div>
+            
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I track my reading progress?</h3>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Visit the Reading Tracker page and enter your book details including total pages and pages read. The tracker calculates your progress percentage and estimated finish date.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I save my favorite books?</h3>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! On the Recommender page, you can save book recommendations to your reading list. Your reading list is saved locally in your browser.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="submitted-feedback">
+            <h2>Your Submitted Feedback</h2>
+            <div id="feedbackList"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="explorer.html">Explorer</a>
+                <a href="tracker.html">Tracker</a>
+                <a href="recommender.html">Recommender</a>
+                <a href="flow.html">Reading Flow</a>
+                <a href="feedback.html">Feedback</a>
+            </div>
+            <div class="newsletter">
+                <h3>Subscribe to Newsletter</h3>
+                <form id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="newsletterMessage"></p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Readify. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/feedback.js"></script>
+</body>
+</html>

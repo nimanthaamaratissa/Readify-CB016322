@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readify - Book Recommender</title>
+    <link rel="stylesheet" href="css/recommender.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="images/logo.png" alt="logo" class="logo-img">
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Book Explorer</a></li>
+                <li><a href="tracker.html">Reading Tracker</a></li>
+                <li><a href="recommender.html">Recommender</a></li>
+                <li><a href="flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="recommender-main">
+        <h1>Random Book Recommender</h1>
+        
+        <div class="recommender-container">
+            <div class="selection-section">
+                <h2>Find Your Next Read</h2>
+                
+                <div class="form-group">
+                    <label for="genreSelect">Choose Genre:</label>
+                    <select id="genreSelect">
+                        <option value="">Any Genre</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="romance">Romance</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lengthSelect">Choose Length:</label>
+                    <select id="lengthSelect">
+                        <option value="">Any Length</option>
+                        <option value="short">Short (&lt; 200 pages)</option>
+                        <option value="medium">Medium (200-400 pages)</option>
+                        <option value="long">Long (&gt; 400 pages)</option>
+                    </select>
+                </div>
+                
+                <button id="recommendBtn" class="recommend-btn">Get Recommendation</button>
+                <button id="pickAgainBtn" class="pick-again-btn" style="display: none;">Pick Again</button>
+            </div>
+            
+            <div class="recommendation-section" id="recommendationSection" style="display: none;">
+                <h2>We Recommend:</h2>
+                <div class="book-recommendation">
+                    <div class="book-cover" id="bookCover"></div>
+                    <div class="book-details">
+                        <p class="book-author" id="bookAuthor"></p>
+                        <p class="book-genre" id="bookGenre"></p>
+                        <p class="book-pages" id="bookPages"></p>
+                        <p class="book-rating" id="bookRating"></p>
+                        <p class="book-description" id="bookDescription"></p>
+                        <button id="saveToListBtn" class="save-btn">Add to Reading List</button>
+                        <p id="saveMessage" class="save-message"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="reading-list-section">
+            <h2>My Reading List</h2>
+            <div id="readingList" class="reading-list"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="explorer.html">Explorer</a>
+                <a href="tracker.html">Tracker</a>
+                <a href="recommender.html">Recommender</a>
+                <a href="flow.html">Reading Flow</a>
+                <a href="feedback.html">Feedback</a>
+            </div>
+            <div class="newsletter">
+                <h3>Subscribe to Newsletter</h3>
+                <form id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p id="newsletterMessage"></p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Readify. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/recommender.js"></script>
+</body>
+</html>
